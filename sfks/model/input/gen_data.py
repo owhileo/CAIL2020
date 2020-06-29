@@ -10,7 +10,8 @@ def load_json(path):
 
 def dump_json(path,data):
     with open(path,'w',encoding='utf8') as f:
-        print(json.dumps(data, ensure_ascii=False, sort_keys=True), file=f)
+        for i in data:
+            print(json.dumps(i, ensure_ascii=False, sort_keys=True), file=f)
 
 train=0.8
 valid=0.1
