@@ -8,7 +8,7 @@ output_path = "/output"
 
 if __name__ == "__main__":
     os.system(
-        "python utils/cutter.py --input input --output data/cutted")
+        "python utils/cutter.py --input input --output data/cutted --gen_word2id")
     os.system(
         "python test.py --gpu 0 --config config/model.config --checkpoint data/model/model/31.pkl --result result.json")
     result = {}
